@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 2020_08_27_011711) do
     t.string "availability"
     t.integer "price"
     t.integer "cj"
+    t.string "museum_phrase"
+    t.string "catch_phrase"
     t.string "image_uri"
     t.string "icon_uri"
     t.datetime "created_at", precision: 6, null: false
