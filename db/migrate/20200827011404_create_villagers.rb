@@ -8,6 +8,7 @@ class CreateVillagers < ActiveRecord::Migration[6.0]
       t.string :catch_phrase
       t.string :icon_uri
       t.string :image_uri
+      t.string :saying
 
       t.timestamps
     end

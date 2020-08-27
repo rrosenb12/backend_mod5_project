@@ -174,6 +174,7 @@ ActiveRecord::Schema.define(version: 2020_08_27_011711) do
     t.string "catch_phrase"
     t.string "icon_uri"
     t.string "image_uri"
+    t.string "saying"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
