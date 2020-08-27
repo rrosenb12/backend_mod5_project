@@ -8,6 +8,9 @@
 
 Villager.destroy_all
 Bug.destroy_all
+Fish.destroy_all 
+SeaCreature.destroy_all 
+Fossil.destroy_all
 
 def villagers
     response = RestClient.get('http://acnhapi.com/v1/villagers/')
