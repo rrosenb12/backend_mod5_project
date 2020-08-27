@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+    validates :username, :password, presence: true
+    validates :username, uniqueness: {case_sensitive: false}
+
     has_many :user_bugs
     has_many :bugs, through: :user_bugs
     has_many :user_fishes
