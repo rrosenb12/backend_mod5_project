@@ -1,0 +1,2 @@
+class UserFossil < ApplicationRecord
+end

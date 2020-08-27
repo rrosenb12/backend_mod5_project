@@ -1,0 +1,2 @@
+class FossilsController < ApplicationController
+end

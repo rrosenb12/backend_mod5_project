@@ -1,0 +1,2 @@
+class UserBug < ApplicationRecord
+end

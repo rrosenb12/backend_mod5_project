@@ -1,0 +1,2 @@
+class UserSeacreature < ApplicationRecord
+end

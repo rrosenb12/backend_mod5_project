@@ -1,0 +1,2 @@
+class SeaCreaturesController < ApplicationController
+end

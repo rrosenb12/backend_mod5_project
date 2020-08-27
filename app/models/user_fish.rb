@@ -1,0 +1,2 @@
+class UserFish < ApplicationRecord
+end
