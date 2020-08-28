@@ -41,7 +41,7 @@ def fish
     json = JSON.parse(response)
     if !json.nil?
         json.each do |key, value|
-            Fish.create(name: "#{value['file-name']}", availability: "#{value['availability']['month-northern']} #{value['availability']['time']}", price: "#{value['price']}", cj: "#{value['price-flick']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch_phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}")
+            Fish.create(name: "#{value['file-name']}", availability: "#{value['availability']['month-northern']} #{value['availability']['time']}", price: "#{value['price']}", cj: "#{value['price-cj']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch_phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}")
         end
     else
         puts 'error seeding fish'
