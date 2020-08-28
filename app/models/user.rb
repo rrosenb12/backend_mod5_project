@@ -1,6 +1,7 @@
 class User < ApplicationRecord
     validates :username, :password, presence: true
     validates :username, uniqueness: {case_sensitive: false}
+    has_one_attached :pro_pic
 
     has_many :user_bugs
     has_many :bugs, through: :user_bugs
