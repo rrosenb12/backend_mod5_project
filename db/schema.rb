@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2020_08_28_135336) do
   end
 
   create_table "bugs", force: :cascade do |t|
+    t.string "kind"
     t.string "name"
     t.string "availability"
     t.integer "price"
@@ -58,6 +59,7 @@ ActiveRecord::Schema.define(version: 2020_08_28_135336) do
   end
 
   create_table "fish", force: :cascade do |t|
+    t.string "kind"
     t.string "name"
     t.string "availability"
     t.integer "price"
@@ -71,6 +73,7 @@ ActiveRecord::Schema.define(version: 2020_08_28_135336) do
   end
 
   create_table "fossils", force: :cascade do |t|
+    t.string "kind"
     t.string "name"
     t.integer "price"
     t.string "museum_phrase"
@@ -80,6 +83,7 @@ ActiveRecord::Schema.define(version: 2020_08_28_135336) do
   end
 
   create_table "items", force: :cascade do |t|
+    t.string "kind"
     t.boolean "isdiy"
     t.boolean "customizable"
     t.string "name"
@@ -116,6 +120,7 @@ ActiveRecord::Schema.define(version: 2020_08_28_135336) do
   end
 
   create_table "sea_creatures", force: :cascade do |t|
+    t.string "kind"
     t.string "name"
     t.string "availability"
     t.integer "price"
@@ -190,6 +195,7 @@ ActiveRecord::Schema.define(version: 2020_08_28_135336) do
   end
 
   create_table "villagers", force: :cascade do |t|
+    t.string "kind"
     t.string "name"
     t.string "personality"
     t.string "birthday"

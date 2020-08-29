@@ -17,7 +17,7 @@ def villagers
     json = JSON.parse(response)
     if !json.nil?
         json.each do |key, value|
-            Villager.create(name: "#{value['name']['name-USen']}", personality: "#{value['personality']}", birthday: "#{value['birthday-string']}", species: "#{value['species']}", catch_phrase: "#{value['catch-phrase']}", icon_uri: "#{value['icon_uri']}", image_uri: "#{value['image_uri']}", saying: "#{value['saying']}")
+            Villager.create(kind: 'villagers', name: "#{value['name']['name-USen']}", personality: "#{value['personality']}", birthday: "#{value['birthday-string']}", species: "#{value['species']}", catch_phrase: "#{value['catch-phrase']}", icon_uri: "#{value['icon_uri']}", image_uri: "#{value['image_uri']}", saying: "#{value['saying']}")
         end
     else
         puts 'error seeding villagers'
@@ -29,7 +29,7 @@ def bugs
     json = JSON.parse(response)
     if !json.nil?
         json.each do |key, value|
-            Bug.create(name: "#{value['name']['name-USen']}", availability: "#{value['availability']['month-array-northern']} #{value['availability']['time']}", price: "#{value['price']}", flick: "#{value['price-flick']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch_phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}")
+            Bug.create(kind: 'bugs', name: "#{value['name']['name-USen']}", availability: "#{value['availability']['month-array-northern']} #{value['availability']['time']}", price: "#{value['price']}", flick: "#{value['price-flick']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch_phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}")
         end
     else
         puts 'error seeding bugs'
@@ -41,7 +41,7 @@ def fish
     json = JSON.parse(response)
     if !json.nil?
         json.each do |key, value|
-            Fish.create(name: "#{value['name']['name-USen']}", availability: "#{value['availability']['month-array-northern']} #{value['availability']['time']}", price: "#{value['price']}", cj: "#{value['price-cj']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch_phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}")
+            Fish.create(kind: 'fish', name: "#{value['name']['name-USen']}", availability: "#{value['availability']['month-array-northern']} #{value['availability']['time']}", price: "#{value['price']}", cj: "#{value['price-cj']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch_phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}")
         end
     else
         puts 'error seeding fish'
@@ -53,7 +53,7 @@ def fossils
     json = JSON.parse(response)
     if !json.nil?
         json.each do |key, value|
-            Fossil.create(name: "#{value['name']['name-USen']}", price: "#{value['price']}", museum_phrase: "#{value['museum-phrase']}", image_uri: "#{value['image_uri']}")
+            Fossil.create(kind: 'fossils', name: "#{value['name']['name-USen']}", price: "#{value['price']}", museum_phrase: "#{value['museum-phrase']}", image_uri: "#{value['image_uri']}")
         end
     else
         puts 'error seeding fossils'
@@ -65,7 +65,7 @@ def sea_creatures
     json = JSON.parse(response)
     if !json.nil?
         json.each do |key, value|
-            SeaCreature.create(name: "#{value['name']['name-USen']}", availability: "#{value['availability']['month-array-northern']} #{value['availability']['time']}", price: "#{value['price']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch_phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}")
+            SeaCreature.create(kind: 'seacreatures', name: "#{value['name']['name-USen']}", availability: "#{value['availability']['month-array-northern']} #{value['availability']['time']}", price: "#{value['price']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch_phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}")
         end
     else
         puts 'error seeding sea_creatures'
