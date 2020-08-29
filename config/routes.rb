@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   resources :fossils
   resources :sea_creatures
   resources :user_bugs
+  resources :user_villagers
+  resources :user_fish
+  resources :user_items
+  resources :user_seacreatures
+  resources :user_fossils
   resources :bugs
   resources :fish
   resources :users
