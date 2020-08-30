@@ -112,7 +112,6 @@ ActiveRecord::Schema.define(version: 2020_08_28_135336) do
   end
 
   create_table "pictures", force: :cascade do |t|
-    t.string "image"
     t.string "description"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
