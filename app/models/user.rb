@@ -20,4 +20,6 @@ class User < ApplicationRecord
     has_many :comments
     has_many :tag_follows
     has_many :tags, through: :tag_follows
+
+    self.include_root_in_json = false
 end
