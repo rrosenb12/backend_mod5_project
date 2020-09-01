@@ -1,4 +1,8 @@
 class PicturesController < ApplicationController
+
+    skip_before_action :authorized
+
+    
     def index
         @pictures = Picture.all 
         render json: @pictures

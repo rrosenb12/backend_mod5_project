@@ -1,4 +1,8 @@
 class FossilsController < ApplicationController
+
+    skip_before_action :authorized
+
+    
     def index
         @fossils = Fossil.all
         render json: @fossils

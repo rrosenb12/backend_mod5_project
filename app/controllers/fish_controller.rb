@@ -1,4 +1,8 @@
 class FishController < ApplicationController
+
+    skip_before_action :authorized
+
+    
     def index
         @fishes = Fish.all
         render json: @fishes

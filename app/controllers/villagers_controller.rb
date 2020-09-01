@@ -1,4 +1,8 @@
 class VillagersController < ApplicationController
+
+    skip_before_action :authorized
+
+    
     def index
         @villagers = Villager.all
         render json: @villagers

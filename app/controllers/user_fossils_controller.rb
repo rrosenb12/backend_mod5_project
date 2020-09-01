@@ -1,4 +1,7 @@
 class UserFossilsController < ApplicationController
+    skip_before_action :authorized
+
+    
     def index
         @user_fossils = UserFossil.all
         render json: @user_fossils

@@ -1,4 +1,7 @@
 class UserFishController < ApplicationController
+    skip_before_action :authorized
+
+    
     def index
         @user_fish = UserFish.all
         render json: @user_fish
