@@ -31,7 +31,7 @@ def bugs
     json = JSON.parse(response)
     if !json.nil?
         json.each do |key, value|
-            Bug.create(kind: 'bugs', name: "#{value['name']['name-USen']}", availability: "#{value['availability']['month-array-northern']}", hours: "#{value['availability']['time']}", price: "#{value['price']}", flick: "#{value['price-flick']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch-phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}", timearray: "#{value['availability']['month-array-northern']}")
+            Bug.create(kind: 'bugs', name: "#{value['name']['name-USen']}", availability: "#{value['availability']['month-array-northern']}", hours: "#{value['availability']['time']}", price: "#{value['price']}", flick: "#{value['price-flick']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch-phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}")
         end
     else
         puts 'error seeding bugs'
@@ -43,7 +43,7 @@ def fish
     json = JSON.parse(response)
     if !json.nil?
         json.each do |key, value|
-            Fish.create(kind: 'fish', name: "#{value['name']['name-USen']}", availability: "#{value['availability']['month-array-northern']}", hours: "#{value['availability']['time']}", price: "#{value['price']}", cj: "#{value['price-cj']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch-phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}", timearray: "#{value['availability']['month-array-northern']}")
+            Fish.create(kind: 'fish', name: "#{value['name']['name-USen']}", availability: "#{value['availability']['month-array-northern']}", hours: "#{value['availability']['time']}", price: "#{value['price']}", cj: "#{value['price-cj']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch-phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}")
         end
     else
         puts 'error seeding fish'
@@ -67,7 +67,7 @@ def sea_creatures
     json = JSON.parse(response)
     if !json.nil?
         json.each do |key, value|
-            SeaCreature.create(kind: 'seacreatures', name: "#{value['name']['name-USen']}", availability: "#{value['availability']['month-array-northern']}", hours: "#{value['availability']['time']}", price: "#{value['price']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch-phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}", timearray: "#{value['availability']['month-array-northern']}".gsub('[','').gsub(']','').gsub(',','').split)
+            SeaCreature.create(kind: 'seacreatures', name: "#{value['name']['name-USen']}", availability: "#{value['availability']['month-array-northern']}", hours: "#{value['availability']['time']}", price: "#{value['price']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch-phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}")
         end
     else
         puts 'error seeding sea_creatures'
