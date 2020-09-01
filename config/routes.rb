@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   resources :picture_tags
   resources :tags
   resources :likes
-  resources :comments
-  resources :pictures
+  resources :pictures do
+    resource :comments
+  end
   resources :items
   resources :villagers
   resources :fossils

@@ -4,6 +4,7 @@ class CreateSeaCreatures < ActiveRecord::Migration[6.0]
       t.string :kind
       t.string :name
       t.string :availability
+      t.string :hours
       t.integer :price
       t.string :museum_phrase
       t.string :catch_phrase

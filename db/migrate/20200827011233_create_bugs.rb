@@ -4,6 +4,7 @@ class CreateBugs < ActiveRecord::Migration[6.0]
       t.string :kind
       t.string :name
       t.string :availability
+      t.string :hours
       t.integer :price
       t.integer :flick
       t.string :museum_phrase

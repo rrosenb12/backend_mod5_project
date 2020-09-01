@@ -11,6 +11,8 @@ Bug.destroy_all
 Fish.destroy_all 
 SeaCreature.destroy_all 
 Fossil.destroy_all
+Tag.destroy_all
+PictureTag.destroy_all
 
 def villagers
     response = RestClient.get('http://acnhapi.com/v1/villagers/')
@@ -29,7 +31,7 @@ def bugs
     json = JSON.parse(response)
     if !json.nil?
         json.each do |key, value|
-            Bug.create(kind: 'bugs', name: "#{value['name']['name-USen']}", availability: "#{value['availability']['month-array-northern']} #{value['availability']['time']}", price: "#{value['price']}", flick: "#{value['price-flick']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch_phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}")
+            Bug.create(kind: 'bugs', name: "#{value['name']['name-USen']}", availability: "#{value['availability']['month-array-northern']}", hours: "#{value['availability']['time']}", price: "#{value['price']}", flick: "#{value['price-flick']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch-phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}")
         end
     else
         puts 'error seeding bugs'
@@ -41,7 +43,7 @@ def fish
     json = JSON.parse(response)
     if !json.nil?
         json.each do |key, value|
-            Fish.create(kind: 'fish', name: "#{value['name']['name-USen']}", availability: "#{value['availability']['month-array-northern']} #{value['availability']['time']}", price: "#{value['price']}", cj: "#{value['price-cj']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch_phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}")
+            Fish.create(kind: 'fish', name: "#{value['name']['name-USen']}", availability: "#{value['availability']['month-array-northern']}", hours: "#{value['availability']['time']}", price: "#{value['price']}", cj: "#{value['price-cj']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch-phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}")
         end
     else
         puts 'error seeding fish'
@@ -65,12 +67,17 @@ def sea_creatures
     json = JSON.parse(response)
     if !json.nil?
         json.each do |key, value|
-            SeaCreature.create(kind: 'seacreatures', name: "#{value['name']['name-USen']}", availability: "#{value['availability']['month-array-northern']} #{value['availability']['time']}", price: "#{value['price']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch_phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}")
+            SeaCreature.create(kind: 'seacreatures', name: "#{value['name']['name-USen']}", availability: "#{value['availability']['month-array-northern']}", hours: "#{value['availability']['time']}", price: "#{value['price']}", museum_phrase: "#{value['museum-phrase']}", catch_phrase: "#{value['catch-phrase']}", image_uri: "#{value['image_uri']}", icon_uri: "#{value['icon_uri']}")
         end
     else
         puts 'error seeding sea_creatures'
     end
 end
+
+Tag.create(description: 'funny')
+Tag.create(description: 'cute')
+Tag.create(description: 'awkward')
+Tag.create(description: 'sad')
 
 sea_creatures
 fossils
