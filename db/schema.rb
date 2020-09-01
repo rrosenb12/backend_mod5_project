@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_28_135336) do
+ActiveRecord::Schema.define(version: 2020_09_01_142626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2020_08_28_135336) do
     t.string "icon_uri"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "timearray", default: [], array: true
   end
 
   create_table "comments", force: :cascade do |t|
@@ -72,6 +73,7 @@ ActiveRecord::Schema.define(version: 2020_08_28_135336) do
     t.string "icon_uri"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "timearray", default: [], array: true
   end
 
   create_table "fossils", force: :cascade do |t|
@@ -132,6 +134,7 @@ ActiveRecord::Schema.define(version: 2020_08_28_135336) do
     t.string "icon_uri"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "timearray", default: [], array: true
   end
 
   create_table "tag_follows", force: :cascade do |t|
