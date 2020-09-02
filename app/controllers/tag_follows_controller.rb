@@ -8,7 +8,7 @@ class TagFollowsController < ApplicationController
     end
 
     def create
-        @tag_follow = UserFish.create(tag_follow_params)
+        @tag_follow = TagFollow.create(tag_follow_params)
         render json: @tag_follow
     end
 
