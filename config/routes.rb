@@ -18,5 +18,6 @@ Rails.application.routes.draw do
   resources :bugs
   resources :fish
   resources :users
+  resources :tag_follows
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
