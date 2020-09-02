@@ -1,4 +1,8 @@
 class SeaCreaturesController < ApplicationController
+
+    skip_before_action :authorized
+
+    
     def index
         @sea_creatures = SeaCreature.all
         render json: @sea_creatures

@@ -1,4 +1,7 @@
 class PictureTagsController < ApplicationController
+
+    skip_before_action :authorized
+
     def index
         @picture_tags = PictureTag.all 
         render json: @picture_tags 

@@ -1,4 +1,7 @@
 class UserItemsController < ApplicationController
+    skip_before_action :authorized
+
+    
     def index
         @user_items = UserItem.all
         render json: @user_items

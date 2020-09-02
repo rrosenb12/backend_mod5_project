@@ -2,9 +2,7 @@ Rails.application.routes.draw do
   resources :picture_tags
   resources :tags
   resources :likes
-  resources :pictures do
-    resource :comments
-  end
+  resources :pictures
   resources :items
   resources :villagers
   resources :fossils
@@ -19,5 +17,9 @@ Rails.application.routes.draw do
   resources :fish
   resources :users
   resources :tag_follows
+
+  post '/login', to: 'auth#create'
+  get '/profile', to: 'users#profile'
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

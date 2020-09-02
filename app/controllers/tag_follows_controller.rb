@@ -1,5 +1,7 @@
 class TagFollowsController < ApplicationController
 
+    skip_before_action :authorized
+
     def index
         @tag_follows = TagFollow.all
         render json: @tag_follows

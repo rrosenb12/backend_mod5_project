@@ -1,4 +1,7 @@
 class BugsController < ApplicationController
+
+    skip_before_action :authorized
+
     def index
         @bugs = Bug.all
         render json: @bugs
