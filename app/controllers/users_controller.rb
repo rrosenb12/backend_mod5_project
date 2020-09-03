@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     skip_before_action :authorized, only: [:create, :index]
 
     def profile
+        byebug
         render json: {user: UserSerializer.new(current_user)}, status: :accepted
     end
 
@@ -10,11 +11,6 @@ class UsersController < ApplicationController
         @users = User.all
         render json: @users.as_json(include: [:villagers])
     end
-
-    # def show
-    #     @user = User.find(params[:id])
-    #     render json: @user
-    # end
 
     def create
         @user = User.create(user_params)
