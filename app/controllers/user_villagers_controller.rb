@@ -12,6 +12,11 @@ class UserVillagersController < ApplicationController
         render json: @user_villager
     end
 
+    def destroy
+        @user_villager = UserVillager.find(params[:id])
+        @user_villager.destroy
+    end
+
     private
 
     def user_villager_params
