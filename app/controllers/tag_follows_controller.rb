@@ -12,6 +12,11 @@ class TagFollowsController < ApplicationController
         render json: @tag_follow
     end
 
+    def destroy
+        @tag_follow = TagFollow.find(params[:id])
+        @tag_follow.destroy
+    end
+
     private
 
     def tag_follow_params

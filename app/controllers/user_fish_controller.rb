@@ -12,6 +12,11 @@ class UserFishController < ApplicationController
         render json: @user_fish
     end
 
+    def destroy
+        @user_fish = UserFish.find(params[:id])
+        @user_fish.destroy
+    end
+
     private
 
     def user_fish_params

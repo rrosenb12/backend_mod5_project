@@ -12,6 +12,11 @@ class UserItemsController < ApplicationController
         render json: @user_item
     end
 
+    def destroy
+        @user_item = UserItem.find(params[:id])
+        @user_item.destroy
+    end
+
     private
 
     def user_item_params

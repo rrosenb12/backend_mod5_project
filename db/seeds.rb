@@ -13,6 +13,12 @@ SeaCreature.destroy_all
 Fossil.destroy_all
 Tag.destroy_all
 PictureTag.destroy_all
+User.destroy_all 
+Picture.destroy_all 
+UserVillager.destroy_all 
+UserBug.destroy_all 
+UserSeacreature.destroy_all 
+UserFossil.destroy_all 
 
 def villagers
     response = RestClient.get('http://acnhapi.com/v1/villagers/')
@@ -79,8 +85,13 @@ Tag.create(description: 'cute')
 Tag.create(description: 'awkward')
 Tag.create(description: 'sad')
 
+puts "creating sea creatures"
 sea_creatures
+puts "creating fossils"
 fossils
+puts "creating fish"
 fish
+puts "creating villagers"
 villagers
+puts "creating bugs"
 bugs

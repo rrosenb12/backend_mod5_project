@@ -12,11 +12,6 @@ class TagsController < ApplicationController
         render json: @tag
     end
 
-    def create
-        @tag = Tag.create(tag_params)
-        render json: @tag
-    end
-
     private
 
     def tag_params

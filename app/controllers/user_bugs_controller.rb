@@ -12,6 +12,11 @@ class UserBugsController < ApplicationController
         render json: @user_bug
     end
 
+    def destroy
+        @user_bug = UserBug.find(params[:id])
+        @user_bug.destroy
+    end
+
     private
 
     def user_bug_params

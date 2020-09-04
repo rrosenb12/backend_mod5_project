@@ -12,6 +12,11 @@ class UserSeacreaturesController < ApplicationController
         render json: @user_seacreature
     end
 
+    def destroy
+        @user_seacreature = UserSeacreature.find(params[:id])
+        @user_seacreature.destroy
+    end
+
     private
 
     def user_seacreature_params

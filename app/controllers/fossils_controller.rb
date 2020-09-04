@@ -1,7 +1,6 @@
 class FossilsController < ApplicationController
 
     skip_before_action :authorized
-
     
     def index
         @fossils = Fossil.all
@@ -12,4 +11,5 @@ class FossilsController < ApplicationController
         @fossil = Fossil.find(params[:id])
         render json: @fossil
     end
+    
 end

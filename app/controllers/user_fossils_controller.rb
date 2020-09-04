@@ -12,6 +12,11 @@ class UserFossilsController < ApplicationController
         render json: @user_fossil
     end
 
+    def destroy
+        @user_fossil = UserFossil.find(params[:id])
+        @user_fossil.destroy
+    end
+
     private
 
     def user_fossil_params
