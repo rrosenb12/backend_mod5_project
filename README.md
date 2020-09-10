@@ -1,24 +1,23 @@
-# README
+# Human Crossing Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the backend repository for Human Crossing. You can find the frontend repository by searching frontend_mod5_project in my (@rrosenb12) GitHub profile.
 
-Things you may want to cover:
+To use this project, simply clone this repo to your local machine. Make sure you have access to PostgreSQL and run the following commands in your terminal:
 
-* Ruby version
+1. rails db:create
+2. rails db:migrate
+3. rails db:seed
 
-* System dependencies
+This will have you all set up with the necessary seeded data and table migrations. Run:
 
-* Configuration
+4. rails s
 
-* Database creation
+To start up your server and head on over to the frontend repository to get the rest!
 
-* Database initialization
+# Appreciation
 
-* How to run the test suite
+Thank you to @alexislours for making your ACNH API public!
 
-* Services (job queues, cache servers, search engines, etc.)
+# Contact
 
-* Deployment instructions
-
-* ...
+If you'd like to contact me, you can send me an email at rebecca.ap.rosenberg@gmail.com.
