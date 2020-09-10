@@ -13,11 +13,13 @@ This will have you all set up with the necessary seeded data and table migration
 4. rails s
 
 To start up your server and head on over to the frontend repository to get the rest!
+*** Please have your backend running on localhost:3000 before continuing, however.
+### To repeat: please have your backend running on localhost:3000 before continuing :)
 
-# Appreciation
+## Appreciation
 
 Thank you to @alexislours for making your ACNH API public!
 
-# Contact
+### Contact
 
 If you'd like to contact me, you can send me an email at rebecca.ap.rosenberg@gmail.com.
